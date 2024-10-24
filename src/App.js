@@ -1,13 +1,13 @@
 import './App.css';
-import WheelGraphic from './components/WheelGraphic';
+import { BaseGroupFull } from './components/BaseGroup';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Hi, I'm Cody. Your Codon companion</p>
+        <BaseGroupFull />
+        <p>Hi there, I'm Cody. Your Codon companion.</p>
       </header>
-      <WheelGraphic />
     </div>
   );
 }
