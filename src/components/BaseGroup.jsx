@@ -3,9 +3,14 @@ import styled from 'styled-components';
 
 const Base = styled.div`
   background-color: gray;
+  cursor: pointer;
   display: block;
   height: 2rem;
+  transition: background-color ease-in-out 0.2s;
   width: 2rem;
+  &:hover {
+    background-color: lightgray;
+  }
   &.active {
     background-color: purple;
   }
@@ -13,9 +18,9 @@ const Base = styled.div`
 
 const Bases = [
   { letter: 'A', name: 'Adenine' },
-  { letter: 'U', name: 'Uracil' },
   { letter: 'C', name: 'Cytosine' },
   { letter: 'G', name: 'Guanine' },
+  { letter: 'U', name: 'Uracil' },
 ];
 
 export const BaseGroup = ({ onChange, value }) => {
@@ -45,12 +50,12 @@ export const BaseGroupFull = () => {
 
   return (
     <div>
-      <div style={{ display: 'flex', flexDirection: 'horizontal', gap: '0.5rem' }}>
+      <div style={{ display: 'flex', flexDirection: 'horizontal', gap: '0.25rem' }}>
         <BaseGroup onChange={setB1} value={b1} />
         <BaseGroup onChange={setB2} value={b2} />
         <BaseGroup onChange={setB3} value={b3} />
       </div>
-      <div>{b1 != null && b2 != null && b3 != null ? `${Bases[b1].letter} ${Bases[b2].letter} ${Bases[b3].letter}` : 'Please select three bases.'}</div>
+      <div>{b1 != null && b2 != null && b3 != null ? `${Bases[b1].letter} ${Bases[b2].letter} ${Bases[b3].letter}` : ''}</div>
     </div>
   );
 };
