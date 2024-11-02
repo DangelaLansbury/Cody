@@ -23,6 +23,29 @@ const Bases = [
   { letter: 'U', name: 'Uracil' },
 ];
 
+const AminoAcids = [
+  { letter: 'A', name: 'Alanine' },
+  { letter: 'C', name: 'Cysteine' },
+  { letter: 'D', name: 'Aspartic Acid' },
+  { letter: 'E', name: 'Glutamic Acid' },
+  { letter: 'F', name: 'Phenylalanine' },
+  { letter: 'G', name: 'Glycine' },
+  { letter: 'H', name: 'Histidine' },
+  { letter: 'I', name: 'Isoleucine' },
+  { letter: 'K', name: 'Lysine' },
+  { letter: 'L', name: 'Leucine' },
+  { letter: 'M', name: 'Methionine' },
+  { letter: 'N', name: 'Asparagine' },
+  { letter: 'P', name: 'Proline' },
+  { letter: 'Q', name: 'Glutamine' },
+  { letter: 'R', name: 'Arginine' },
+  { letter: 'S', name: 'Serine' },
+  { letter: 'T', name: 'Threonine' },
+  { letter: 'V', name: 'Valine' },
+  { letter: 'W', name: 'Tryptophan' },
+  { letter: 'Y', name: 'Tyrosine' },
+];
+
 export const BaseGroup = ({ onChange, value }) => {
   const [selected, setSelected] = useState(null);
 
