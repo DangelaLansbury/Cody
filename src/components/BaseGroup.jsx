@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const Base = styled.div`
+const BaseSelector = styled.div`
   background-color: gray;
   cursor: pointer;
   display: block;
@@ -24,7 +24,8 @@ const Bases = [
 ];
 
 const AminoAcids = [
-  { letter: 'A', name: 'Alanine' },
+  { letter: 'A', name: 'Alanine', code: 'Ala', b1: 'G', b2: 'C', b3: 'U' },
+
   { letter: 'C', name: 'Cysteine' },
   { letter: 'D', name: 'Aspartic Acid' },
   { letter: 'E', name: 'Glutamic Acid' },
@@ -57,9 +58,9 @@ export const BaseGroup = ({ onChange, value }) => {
   return (
     <div>
       {Bases.map((base, index) => (
-        <Base key={index} className={selected === index ? 'active' : ''} onClick={() => handleClick(index)}>
+        <BaseSelector key={index} className={selected === index ? 'active' : ''} onClick={() => handleClick(index)}>
           {base.letter}
-        </Base>
+        </BaseSelector>
       ))}
       <input type="hidden" value={value != null ? selected : ''} />
     </div>
