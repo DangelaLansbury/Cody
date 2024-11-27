@@ -8,7 +8,7 @@ function App() {
         <div style={{ display: 'flex', flexDirection: 'horizontal', gap: '1rem' }}>
           <BaseGroupFull />
         </div>
-        <p>Hi there, I'm Cody. Your Codon companion.</p>
+        <p>Select three nucleotide bases to translate codon to amino acid.</p>
       </header>
     </div>
   );
